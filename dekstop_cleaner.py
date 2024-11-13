@@ -1,6 +1,6 @@
 import os
 import shutil
-from tkinter import Tk, Label, Button, filedialog
+from tkinter import Tk, Label, Button
 
 
 class DesktopCleanerApp:
