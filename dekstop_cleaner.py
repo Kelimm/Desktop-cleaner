@@ -15,10 +15,6 @@ class DesktopCleanerApp:
     
     self.button = Button(self.root, text='Clean Desktop', command=self.run_commands, bg='gray', fg='white', font=('Helvetica', 12, 'bold'))
     self.button.pack(pady=20)
-
-    
-    
-    
     self.root.mainloop()
     
   def run_commands(self):
@@ -51,13 +47,14 @@ class DesktopCleanerApp:
       'log': 'TextFiles'
     }
 
+    # Create folder for each extension
     for folder in extension_list.values():
       folder_path = os.path.join(desktop_path,folder)
       if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
     files = os.listdir(desktop_path)
-
+    # Sorting files
     for file in files:
         file_path = os.path.join(desktop_path, file)
         
